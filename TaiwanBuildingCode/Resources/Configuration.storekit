@@ -1,0 +1,38 @@
+{
+  "identifier": "OSH-FACILITIES-ILLUSTRATED-FULL-UNLOCK-STOREKIT",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "390",
+      "familyShareable": true,
+      "internalID": "OSH_FACILITIES_ILLUSTRATED_FULL_UNLOCK",
+      "localizations": [
+        {
+          "description": "解鎖全部 250 張職安設施規則圖解、100 題測驗、20 項現場工具與官方法規速查。",
+          "displayName": "職業安全衛生設施規則全圖解 完整版",
+          "locale": "zh_TW"
+        },
+        {
+          "description": "Unlock all 250 occupational safety facilities illustrations, 100 quiz questions, 20 tools, and official law links.",
+          "displayName": "OSH Facilities Rules Illustrated Full Unlock",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.taiwanarch.oshfacilities.illustrated.full",
+      "referenceName": "OSH Facilities Rules Illustrated Full Unlock",
+      "type": "NonConsumable"
+    }
+  ],
+  "settings": {
+    "_developerTeamID": "7H7ZUG2WX8",
+    "_failTransactionsEnabled": false,
+    "_locale": "zh_TW",
+    "_storefront": "TWN",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 4,
+    "minor": 0
+  }
+}
