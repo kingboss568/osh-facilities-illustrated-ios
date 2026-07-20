@@ -14,7 +14,7 @@ abort "Missing required env vars: #{missing.join(', ')}" unless missing.empty?
 abort "ASC_KEY_FILE does not exist: #{ENV.fetch("ASC_KEY_FILE")}" unless File.exist?(ENV.fetch("ASC_KEY_FILE"))
 
 PRODUCT_ID = ENV.fetch("IAP_PRODUCT_ID", "com.taiwanarch.oshfacilities.illustrated.full")
-APP_VERSION = ENV.fetch("APP_VERSION", "1.0")
+APP_VERSION = ENV.fetch("APP_VERSION", "1.1")
 
 private_key = OpenSSL::PKey.read(File.read(ENV.fetch("ASC_KEY_FILE")))
 TOKEN = JWT.encode(

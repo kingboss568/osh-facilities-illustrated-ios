@@ -1,5 +1,5 @@
 app_identifier ENV.fetch("APP_IDENTIFIER", "com.taiwanarch.oshfacilities.illustrated")
-app_version ENV.fetch("APP_VERSION", "1.0")
+app_version ENV.fetch("APP_VERSION", "1.1")
 metadata_path "./fastlane/metadata"
 screenshots_path "./fastlane/screenshots"
 platform "ios"
@@ -16,7 +16,7 @@ app_review_information(
   last_name: "Jiang",
   phone_number: "+886952413678",
   email_address: "jushiung@gmail.com",
-  notes: "本 App 不需要測試帳號。請於解鎖頁測試 Apple 內購買流程；商品 ID：com.taiwanarch.oshfacilities.illustrated.full。購買後可解鎖完整職安設施規則圖解、條文出處、常用法條與題庫測驗。法規內容為輔助速查，正式申請、審查、施工與使用安全責任仍以主管機關最新公告、核准圖說、現場條件與專業人士判斷為準。"
+  notes: "本 App 不需要測試帳號。首頁搜尋會即時顯示條文結果；五大分類會直接開啟 Pinterest 式雙欄圖卡；「圖卡快覽」可瀏覽 250 張圖解；工具分頁提供 100 個可操作工具，每個都有查核勾選、風險分數、持久化筆記與分享。請於「Pro / 解鎖完整圖解」測試 Apple 內購買流程；商品 ID：com.taiwanarch.oshfacilities.illustrated.full。法規內容為輔助速查，正式法規適用與現場安全責任仍以主管機關最新公告、現場危害評估與職安衛專業人員判斷為準。"
 )
 submission_information({
   add_id_info_uses_idfa: false,

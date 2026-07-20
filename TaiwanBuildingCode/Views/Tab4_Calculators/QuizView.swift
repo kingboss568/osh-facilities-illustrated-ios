@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct CalculatorsHomeView: View {
+private struct LegacyCalculatorsHomeView: View {
     @EnvironmentObject private var iap: IAPManager
     @State private var showPaywall = false
 

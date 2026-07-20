@@ -39,7 +39,31 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BBE28D3426569BE527FE1607"
+               BuildableName = "TaiwanBuildingCodeUnitTests.xctest"
+               BlueprintName = "TaiwanBuildingCodeUnitTests"
+               ReferencedContainer = "container:OSHFacilitiesIllustrated.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E985F7A251AB51CBAEF8BBCE"
+               BuildableName = "TaiwanBuildingCodeUITests.xctest"
+               BlueprintName = "TaiwanBuildingCodeUITests"
+               ReferencedContainer = "container:OSHFacilitiesIllustrated.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -63,9 +87,6 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
       </CommandLineArguments>
-      <StoreKitConfigurationFileReference
-         identifier = "../../TaiwanBuildingCode/Resources/Configuration.storekit">
-      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -83,6 +104,8 @@
             ReferencedContainer = "container:OSHFacilitiesIllustrated.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

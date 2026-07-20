@@ -14,7 +14,7 @@ struct PaywallView: View {
         ("01", "250 張職安設施規則圖解", .featIllust),
         ("02", "20 張免費預覽，Pro 解鎖完整圖解", .featText),
         ("03", "100 題職安設施測驗與解析", .featCalc),
-        ("04", "20 項現場檢核工具", .featStar),
+        ("04", "100 個可操作現場工具", .featStar),
         ("05", "官方法規連結與條文速查", .featCloud),
         ("06", "Apple ID 跨裝置恢復購買", .featCloud),
         ("07", "一次買斷，無廣告、無訂閱", .featNoAd),

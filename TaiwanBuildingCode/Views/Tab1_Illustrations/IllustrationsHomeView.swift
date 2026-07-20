@@ -11,6 +11,7 @@ import SwiftUI
 struct IllustrationsHomeView: View {
     @EnvironmentObject var store: ArticleStore
     @EnvironmentObject var iap: IAPManager
+    @State private var homeQuery = ""
 
     private let series: [(id: String, title: String, en: String,
                           range: String, icon: IsoIconKind)] = [
@@ -34,7 +35,7 @@ struct IllustrationsHomeView: View {
                         HomeHeroCard()
                             .padding(.horizontal, 22)
 
-                        PremiumSearchLink()
+                        HomeSearchPanel(query: $homeQuery)
                             .padding(.horizontal, 22)
 
                         statsBar
@@ -61,21 +62,24 @@ struct IllustrationsHomeView: View {
                 }
             }
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
                     NavigationLink { SearchView() } label: {
                         Image(systemName: "magnifyingglass")
                             .foregroundStyle(AppTheme.primary)
                     }
+                    .accessibilityIdentifier("home-toolbar-search")
                 }
                 if !iap.isUnlocked {
-                    ToolbarItem(placement: .topBarLeading) {
+                    ToolbarItem(placement: .topBarTrailing) {
                         NavigationLink { PaywallView() } label: {
                             HStack(spacing: 4) {
                                 Image(systemName: "crown.fill").font(.caption)
-                                Text("Pro").font(.callout.bold())
+                                Text("Pro / 解鎖完整圖解")
+                                    .font(.system(size: 12, weight: .heavy))
                             }
                             .foregroundStyle(AppTheme.rust)
                         }
+                        .accessibilityIdentifier("home-pro-unlock")
                     }
                 }
             }
@@ -86,23 +90,27 @@ struct IllustrationsHomeView: View {
     private var headerBar: some View {
         HStack(alignment: .center) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("職安設施 Pro")
+                Text("職安現場速查・2026 改版")
                     .font(.system(size: 12, weight: .semibold))
                     .foregroundStyle(AppTheme.rust)
-                Text("職業安全衛生設施規則全圖解")
-                    .font(.system(size: 32, weight: .heavy, design: .serif))
+                Text("圖解・條文・工具一次到位")
+                    .font(.system(size: 27, weight: .heavy, design: .serif))
                     .foregroundStyle(AppTheme.primary)
                     .minimumScaleFactor(0.76)
                     .lineLimit(1)
             }
             Spacer()
             NavigationLink { PaywallView() } label: {
-                Image(systemName: iap.isUnlocked ? "lock.open.fill" : "lock.fill")
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundStyle(AppTheme.primary)
-                    .frame(width: 44, height: 44)
-                    .background(.white.opacity(0.82), in: Circle())
-                    .overlay(Circle().stroke(AppTheme.line, lineWidth: 1))
+                Label(
+                    iap.isUnlocked ? "Pro 已解鎖" : "Pro / 解鎖完整圖解",
+                    systemImage: iap.isUnlocked ? "checkmark.seal.fill" : "crown.fill"
+                )
+                .font(.system(size: 12, weight: .heavy))
+                .foregroundStyle(iap.isUnlocked ? AppTheme.leaf : AppTheme.rust)
+                .padding(.horizontal, 12)
+                .frame(height: 38)
+                .background(.white.opacity(0.9), in: Capsule())
+                .overlay(Capsule().stroke(AppTheme.line))
             }
             .accessibilityLabel(iap.isUnlocked ? "已解鎖完整版" : "Pro 解鎖完整圖解")
         }
@@ -116,7 +124,7 @@ struct IllustrationsHomeView: View {
             divider
             statCell(value: "20", unit: "張", label: "免費預覽")
             divider
-            statCell(value: "20", unit: "項", label: "工具")
+            statCell(value: "100", unit: "個", label: "工具")
         }
         .padding(.vertical, 10)
         .background(.white.opacity(0.88), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
@@ -160,7 +168,7 @@ struct IllustrationsHomeView: View {
                 ForEach(series, id: \.id) { s in
                     let count = store.articles(inSeries: s.id).count
                     NavigationLink {
-                        SeriesChapterListView(seriesId: s.id, seriesTitle: s.title)
+                        SeriesGalleryView(seriesId: s.id, title: s.title)
                     } label: {
                         SeriesPillCard(seriesId: s.id,
                                        title: s.title,
@@ -169,6 +177,7 @@ struct IllustrationsHomeView: View {
                                        count: count)
                     }
                     .buttonStyle(.plain)
+                    .accessibilityIdentifier("home-category-\(s.id)")
                 }
             }
         }
@@ -195,7 +204,7 @@ struct IllustrationsHomeView: View {
 
     private func focusCard(title: String, subtitle: String, count: Int, seriesId: String, icon: IsoIconKind) -> some View {
         NavigationLink {
-            SeriesChapterListView(seriesId: seriesId, seriesTitle: title)
+            SeriesGalleryView(seriesId: seriesId, title: title)
         } label: {
             HStack(spacing: 10) {
                 IsoIcon(kind: icon, size: 38)
@@ -237,7 +246,7 @@ struct IllustrationsHomeView: View {
                     .foregroundStyle(AppTheme.primary)
                 Spacer()
                 NavigationLink {
-                    SeriesChapterListView(seriesId: "general", seriesTitle: "職業安全")
+                    AllGalleryView()
                 } label: {
                     HStack(spacing: 4) {
                         Text("全部")
@@ -276,8 +285,13 @@ struct IllustrationsHomeView: View {
             }
             NavigationLink { CalculatorsHomeView() } label: {
                 QuickActionCard(icon: "checklist.checked",
-                                title: "Pro 工具",
-                                subtitle: "送件、尺寸、公安檢核")
+                                title: "100 個工具",
+                                subtitle: "查核、風險速算、筆記分享")
+            }
+            NavigationLink { AllGalleryView() } label: {
+                QuickActionCard(icon: "rectangle.grid.2x2.fill",
+                                title: "圖卡快覽",
+                                subtitle: "Pinterest 式直式雙欄")
             }
             NavigationLink { FireCommonClausesView() } label: {
                 QuickActionCard(icon: "folder",
@@ -298,10 +312,10 @@ private struct HomeHeroCard: View {
     var body: some View {
         Image("HomeHero")
             .resizable()
-            .scaledToFit()
-            .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: 24, style: .continuous).stroke(AppTheme.line.opacity(0.9), lineWidth: 1))
-            .shadow(color: AppTheme.primary.opacity(0.18), radius: 22, y: 12)
+            .aspectRatio(2022.0 / 778.0, contentMode: .fit)
+            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(AppTheme.line.opacity(0.9), lineWidth: 1))
+            .shadow(color: AppTheme.primary.opacity(0.13), radius: 14, y: 7)
     }
 }
 
@@ -321,7 +335,7 @@ private struct UnlockPromoCard: View {
                     Text("Pro / 解鎖完整圖解")
                         .font(.system(size: 17, weight: .heavy))
                         .foregroundStyle(.white)
-                    Text("一次買斷・250 張圖解・工具題庫完整解鎖")
+                    Text("一次買斷・250 張圖解・100 工具・完整題庫")
                         .font(.system(size: 12, weight: .medium))
                         .foregroundStyle(.white.opacity(0.78))
                 }
@@ -343,30 +357,105 @@ private struct UnlockPromoCard: View {
     }
 }
 
-private struct PremiumSearchLink: View {
+private struct HomeSearchPanel: View {
+    @Binding var query: String
+    @EnvironmentObject private var store: ArticleStore
+    @EnvironmentObject private var iap: IAPManager
+
+    private var results: [Article] {
+        Array(store.search(query).prefix(6))
+    }
+
     var body: some View {
-        NavigationLink { SearchView() } label: {
+        VStack(spacing: 8) {
             HStack(spacing: 14) {
                 Image(systemName: "magnifyingglass")
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundStyle(AppTheme.primary)
-                Text("搜尋條文、關鍵字、機械防護、高處作業、化學品...")
+                TextField("搜尋條文、機械防護、高處作業、化學品…", text: $query)
                     .font(.system(size: 14, weight: .medium))
-                    .foregroundStyle(AppTheme.mute)
-                    .lineLimit(1)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
+                    .accessibilityIdentifier("home-search-field")
                 Spacer()
-                Image(systemName: "slider.horizontal.3")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundStyle(AppTheme.rust)
+                if query.isEmpty {
+                    NavigationLink {
+                        SearchView()
+                    } label: {
+                        Image(systemName: "slider.horizontal.3")
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundStyle(AppTheme.rust)
+                    }
+                    .accessibilityLabel("開啟完整搜尋")
+                } else {
+                    Button {
+                        query = ""
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.system(size: 18, weight: .semibold))
+                            .foregroundStyle(AppTheme.mute)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("清除搜尋")
+                }
             }
             .padding(.horizontal, 18)
             .frame(minHeight: 52)
             .background(.white.opacity(0.88), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 16, style: .continuous).stroke(AppTheme.line, lineWidth: 1))
             .shadow(color: AppTheme.primary.opacity(0.05), radius: 8, y: 4)
+
+            if !query.isEmpty {
+                VStack(spacing: 0) {
+                    if results.isEmpty {
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                            Text("找不到「\(query)」，可改用條號或危害名稱。")
+                            Spacer()
+                        }
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundStyle(AppTheme.mute)
+                        .padding(13)
+                    } else {
+                        ForEach(results) { article in
+                            let canAccess = iap.canAccess(article: article, allArticles: store.allArticles)
+                            NavigationLink {
+                                if canAccess {
+                                    ArticleTextView(article: article)
+                                } else {
+                                    PaywallView()
+                                }
+                            } label: {
+                                HStack(spacing: 10) {
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(article.article_no)
+                                            .font(.system(size: 10, weight: .black, design: .monospaced))
+                                            .foregroundStyle(AppTheme.rust)
+                                        Text(article.title_zh)
+                                            .font(.system(size: 14, weight: .bold))
+                                            .foregroundStyle(AppTheme.primary)
+                                            .lineLimit(1)
+                                    }
+                                    Spacer()
+                                    Image(systemName: canAccess ? "chevron.right" : "lock.fill")
+                                        .font(.system(size: 11, weight: .bold))
+                                        .foregroundStyle(canAccess ? AppTheme.mute : AppTheme.rust)
+                                }
+                                .padding(.horizontal, 13)
+                                .frame(minHeight: 48)
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityIdentifier("home-search-result-\(article.id)")
+                            if article.id != results.last?.id {
+                                Divider().padding(.leading, 13)
+                            }
+                        }
+                    }
+                }
+                .background(.white.opacity(0.94), in: RoundedRectangle(cornerRadius: 15))
+                .overlay(RoundedRectangle(cornerRadius: 15).stroke(AppTheme.line))
+            }
         }
-        .buttonStyle(.plain)
-        .accessibilityLabel("搜尋條文與關鍵字")
     }
 }
 
@@ -380,10 +469,10 @@ private struct SeriesPillCard: View {
     var body: some View {
         HStack(spacing: 10) {
             IsoIcon(kind: icon, size: 46)
-                .frame(width: 50, height: 52)
-            VStack(alignment: .leading, spacing: 4) {
+                .frame(width: 40, height: 42)
+            VStack(alignment: .leading, spacing: 2) {
                 Text(title)
-                    .font(.system(size: 17, weight: .heavy))
+                    .font(.system(size: 15, weight: .heavy))
                     .foregroundStyle(AppTheme.primary)
                     .lineLimit(2)
                     .minimumScaleFactor(0.82)
@@ -392,7 +481,7 @@ private struct SeriesPillCard: View {
                     .foregroundStyle(AppTheme.mute)
                 HStack(alignment: .firstTextBaseline, spacing: 3) {
                     Text("\(count)")
-                        .font(.system(size: 22, weight: .heavy, design: .serif))
+                        .font(.system(size: 17, weight: .heavy, design: .serif))
                         .foregroundStyle(AppTheme.color(for: seriesId))
                     Text("張")
                         .font(.system(size: 11, weight: .bold))
@@ -404,8 +493,8 @@ private struct SeriesPillCard: View {
                 .font(.system(size: 13, weight: .bold))
                 .foregroundStyle(AppTheme.color(for: seriesId))
         }
-        .padding(12)
-        .frame(maxWidth: .infinity, minHeight: 118)
+        .padding(10)
+        .frame(maxWidth: .infinity, minHeight: 86)
         .background(.white.opacity(0.84), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
         .overlay(alignment: .topLeading) {
             RoundedRectangle(cornerRadius: 16, style: .continuous)

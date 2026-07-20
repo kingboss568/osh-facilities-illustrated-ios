@@ -21,9 +21,10 @@ struct ContentView: View {
                 switch selectedTab {
                 case 0: IllustrationsHomeView()
                 case 1: FullTextHomeView()
-                case 2: FireCommonClausesView()
-                case 3: CalculatorsHomeView()
-                case 4: RegulatoryResourcesView()
+                case 2: GalleryView()
+                case 3: FireCommonClausesView()
+                case 4: CalculatorsHomeView()
+                case 5: RegulatoryResourcesView()
                 default: IllustrationsHomeView()
                 }
             }
@@ -63,7 +64,7 @@ private enum ScreenshotLaunchOptions {
               let tab = Int(arguments[index + 1]) else {
             return 0
         }
-        return min(max(tab, 0), 4)
+        return min(max(tab, 0), 5)
     }
 }
 
@@ -72,12 +73,13 @@ private enum ScreenshotLaunchOptions {
 private struct FloatingTabBar: View {
     @Binding var selected: Int
 
-    private let tabs: [(label: String, icon: TabIconShape.TabIcon)] = [
-        ("圖解", .illust),
-        ("條文", .fulltext),
-        ("常用", .common),
-        ("工具", .calc),
-        ("資源", .resource),
+    private let tabs: [(label: String, icon: String)] = [
+        ("圖解", "square.stack.3d.up.fill"),
+        ("條文", "doc.text.fill"),
+        ("快覽", "rectangle.grid.2x2.fill"),
+        ("常用", "bookmark.fill"),
+        ("工具", "wrench.and.screwdriver.fill"),
+        ("資源", "books.vertical.fill"),
     ]
 
     var body: some View {
@@ -92,6 +94,7 @@ private struct FloatingTabBar: View {
                 }
                 .buttonStyle(.plain)
                 .frame(maxWidth: .infinity)
+                .accessibilityIdentifier("tab-\(idx)")
             }
         }
         .padding(.horizontal, 6)
@@ -104,61 +107,25 @@ private struct FloatingTabBar: View {
     }
 
     @ViewBuilder
-    private func tabItem(label: String, icon: TabIconShape.TabIcon, active: Bool) -> some View {
+    private func tabItem(label: String, icon: String, active: Bool) -> some View {
         let color: Color = active ? AppTheme.rust : AppTheme.mute
-        VStack(spacing: 3) {
+        VStack(spacing: 4) {
             ZStack {
                 if active {
-                    // Active indicator underline
                     RoundedRectangle(cornerRadius: 1.5)
                         .fill(AppTheme.rust)
-                        .frame(width: 20, height: 3)
-                        .offset(y: -14)
+                        .frame(width: 18, height: 3)
+                        .offset(y: -15)
                 }
-                TabIconShape(kind: icon)
-                    .stroke(color, style: StrokeStyle(lineWidth: active ? 1.8 : 1.7,
-                                                      lineCap: .round, lineJoin: .round))
-                    .frame(width: 23, height: 23)
-                    // Filled version for active state
-                    .background(
-                        Group {
-                            if active {
-                                tabFill(icon: icon)
-                            }
-                        }
-                    )
+                Image(systemName: icon)
+                    .font(.system(size: 18, weight: active ? .heavy : .semibold))
+                    .symbolRenderingMode(.hierarchical)
+                    .foregroundStyle(color)
+                    .frame(width: 22, height: 22)
             }
             Text(label)
-                .font(.system(size: 10, weight: .semibold))
+                .font(.system(size: 9, weight: .bold))
                 .foregroundStyle(color)
-        }
-    }
-
-    // Active filled layer for certain icons
-    @ViewBuilder
-    private func tabFill(icon: TabIconShape.TabIcon) -> some View {
-        switch icon {
-        case .illust:
-            // diamond filled
-            TabIconShape(kind: .illust)
-                .fill(AppTheme.rust)
-                .frame(width: 24, height: 24)
-        case .fulltext:
-            TabIconShape(kind: .fulltext)
-                .fill(AppTheme.rust)
-                .frame(width: 24, height: 24)
-        case .common:
-            TabIconShape(kind: .common)
-                .fill(AppTheme.rust)
-                .frame(width: 24, height: 24)
-        case .calc:
-            TabIconShape(kind: .calc)
-                .fill(AppTheme.rust)
-                .frame(width: 24, height: 24)
-        case .resource:
-            TabIconShape(kind: .resource)
-                .fill(AppTheme.rust)
-                .frame(width: 24, height: 24)
         }
     }
 }

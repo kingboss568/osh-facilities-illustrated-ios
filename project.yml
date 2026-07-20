@@ -13,8 +13,8 @@ settings:
     SWIFT_VERSION: "5.9"
     DEVELOPMENT_TEAM: "7H7ZUG2WX8"
     CODE_SIGN_STYLE: Automatic
-    MARKETING_VERSION: "1.0"
-    CURRENT_PROJECT_VERSION: "1"
+    MARKETING_VERSION: "1.1"
+    CURRENT_PROJECT_VERSION: "2"
 
 targets:
   TaiwanBuildingCode:
@@ -35,16 +35,14 @@ targets:
         buildPhase: resources
       - path: TaiwanBuildingCode/Resources/PrivacyInfo.xcprivacy
         buildPhase: resources
-      - path: TaiwanBuildingCode/Resources/Configuration.storekit
-        buildPhase: resources
     info:
       path: TaiwanBuildingCode/Resources/Info.plist
       properties:
         CFBundleDevelopmentRegion: zh_TW
         CFBundleDisplayName: 職業安全衛生設施規則全圖解
         CFBundleName: 職業安全衛生設施規則全圖解
-        CFBundleShortVersionString: "1.0"
-        CFBundleVersion: "1"
+        CFBundleShortVersionString: "1.1"
+        CFBundleVersion: "2"
         ITSAppUsesNonExemptEncryption: false
         UILaunchScreen:
           UIColorName: LaunchScreenBG
@@ -64,6 +62,35 @@ targets:
         ENABLE_PREVIEWS: "YES"
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    scheme:
+      testTargets:
+        - TaiwanBuildingCodeUnitTests
+        - TaiwanBuildingCodeUITests
+
+  TaiwanBuildingCodeUnitTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Tests/UnitTests
+    dependencies:
+      - target: TaiwanBuildingCode
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.taiwanarch.oshfacilities.illustrated.tests
+
+  TaiwanBuildingCodeUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Tests/UITests
+    dependencies:
+      - target: TaiwanBuildingCode
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.taiwanarch.oshfacilities.illustrated.uitests
+        TEST_TARGET_NAME: TaiwanBuildingCode
 
 schemes:
   TaiwanBuildingCode:
@@ -73,5 +100,10 @@ schemes:
     run:
       config: Debug
       storeKitConfiguration: TaiwanBuildingCode/Resources/Configuration.storekit
+    test:
+      config: Debug
+      targets:
+        - TaiwanBuildingCodeUnitTests
+        - TaiwanBuildingCodeUITests
     archive:
       config: Release

@@ -14,6 +14,7 @@
 		05D9CD44262E775B4FDAA49F /* OSH-193.heic in Resources */ = {isa = PBXBuildFile; fileRef = A9DD7067BD89328478385472 /* OSH-193.heic */; };
 		0640F7D19C43759CCF33C3D8 /* OSH-047.heic in Resources */ = {isa = PBXBuildFile; fileRef = E0545ED686918FF895AD73E3 /* OSH-047.heic */; };
 		07CBFAD18F6356E863A4B399 /* OSH-159.heic in Resources */ = {isa = PBXBuildFile; fileRef = 538CC207EA78A5F19576AFA4 /* OSH-159.heic */; };
+		07E4E6E2CDDDE285D9433113 /* TaiwanBuildingCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74459EE39596AD82E32A4D30 /* TaiwanBuildingCodeTests.swift */; };
 		07F3E407782E215046C3324B /* OSH-070.heic in Resources */ = {isa = PBXBuildFile; fileRef = 1B203E286F2FEED446B49FEE /* OSH-070.heic */; };
 		082E7441E1582846549B395A /* OSH-227.heic in Resources */ = {isa = PBXBuildFile; fileRef = 38594C18E3A8C3EA47AED06B /* OSH-227.heic */; };
 		08348D92C8C750652479089F /* OSH-088.heic in Resources */ = {isa = PBXBuildFile; fileRef = F86792DD16921180642E20E5 /* OSH-088.heic */; };
@@ -30,6 +31,7 @@
 		14534FC6349EAB717A2C206C /* OSH-201.heic in Resources */ = {isa = PBXBuildFile; fileRef = 6B62007CCDD73E69F94CA652 /* OSH-201.heic */; };
 		155709DF7EDBB3C7F8C060C9 /* OSH-200.heic in Resources */ = {isa = PBXBuildFile; fileRef = 05300DD8DC0E2C8283889FB4 /* OSH-200.heic */; };
 		17A0D302BF0DD858E00DD114 /* OSH-028.heic in Resources */ = {isa = PBXBuildFile; fileRef = AF314C0213CEE88413E2600C /* OSH-028.heic */; };
+		1903A7F7C91FD52508C4E0B0 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645112148CA0BF824E47A442 /* GalleryView.swift */; };
 		195369BB52FFD31C6B867973 /* OSH-244.heic in Resources */ = {isa = PBXBuildFile; fileRef = 5F568771776D8F6DA5F53306 /* OSH-244.heic */; };
 		1B54B31CE7E210221124CA60 /* OSH-094.heic in Resources */ = {isa = PBXBuildFile; fileRef = 87FE086F00AEA80C90EE01F3 /* OSH-094.heic */; };
 		1C509F0D920D9B9C0C636A1C /* OSH-148.heic in Resources */ = {isa = PBXBuildFile; fileRef = 8D78B09777CCCCC92ED5C65E /* OSH-148.heic */; };
@@ -85,6 +87,7 @@
 		3FF38E089A247BCA1C2F4751 /* OSH-214.heic in Resources */ = {isa = PBXBuildFile; fileRef = E5CA124EBBAE0854E590BA63 /* OSH-214.heic */; };
 		41D71646EBB52BA2187C2AC4 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD089EB11A2E74CDEC6D57D /* ArticleDetailView.swift */; };
 		44A5F3A3EE9A70F79A6C7CDB /* OSH-223.heic in Resources */ = {isa = PBXBuildFile; fileRef = 09901A2A18DDE4F668C74764 /* OSH-223.heic */; };
+		4517DB12E4CAA463AABD5881 /* SafetyTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212D146B63D68E6DABE57A49 /* SafetyTool.swift */; };
 		4521B26CE2B56A2A09C7F15B /* OSH-228.heic in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D0D1E3AB4805E1715F9EE /* OSH-228.heic */; };
 		454F48539884D08580B9DC16 /* OSH-034.heic in Resources */ = {isa = PBXBuildFile; fileRef = 94C21498A7BBC84D4F3ACB2E /* OSH-034.heic */; };
 		47FE869967A58A7837734F1D /* OSH-194.heic in Resources */ = {isa = PBXBuildFile; fileRef = 336D50D3992AA426BD477447 /* OSH-194.heic */; };
@@ -154,6 +157,7 @@
 		80978478674C33B65F760959 /* OSH-169.heic in Resources */ = {isa = PBXBuildFile; fileRef = EA68406BB32858B4892E33BF /* OSH-169.heic */; };
 		8193B54A87CC7790D677086D /* OSH-196.heic in Resources */ = {isa = PBXBuildFile; fileRef = C94E323066FDEE1094B2B31F /* OSH-196.heic */; };
 		8261AE8DF11DE13625AD5355 /* OSH-004.heic in Resources */ = {isa = PBXBuildFile; fileRef = E6E18DE6B1E2A7C1D51EF2FD /* OSH-004.heic */; };
+		82928D3B466A757FD038C594 /* TaiwanBuildingCodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAF92AE322D5EFEA568971 /* TaiwanBuildingCodeUITests.swift */; };
 		8300796481589630816C493E /* OSH-092.heic in Resources */ = {isa = PBXBuildFile; fileRef = A516367839767E94F0E9C940 /* OSH-092.heic */; };
 		84976CCF22FF0344D78B4199 /* OSH-150.heic in Resources */ = {isa = PBXBuildFile; fileRef = F9B5066EF605A3C1E2A5A038 /* OSH-150.heic */; };
 		849D0376F09024CAF3BAB979 /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C089AE000FF01EC45D774B84 /* QuizQuestion.swift */; };
@@ -199,7 +203,7 @@
 		B0A59B22253B92A5AF9366BD /* OSH-053.heic in Resources */ = {isa = PBXBuildFile; fileRef = 1BB42F685351523B734603C5 /* OSH-053.heic */; };
 		B2960170DA9967535A02C4D3 /* RegulatoryResourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876C7E18E09DDE58FDE7635 /* RegulatoryResourcesView.swift */; };
 		B545145B20F999053188CB5D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CB34BB2D6ECA4B4CA71E57 /* SearchView.swift */; };
-		B71D1D8F7C2068E09AE1738F /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 3224D5D1907E58C90ADA93D6 /* Configuration.storekit */; };
+		B5BF94CD7503EB796AC788CF /* SafetyToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C628B3E677BDA46459EB18BE /* SafetyToolsView.swift */; };
 		B72222CBBCBF47E3E890841B /* OSH-147.heic in Resources */ = {isa = PBXBuildFile; fileRef = CC87B61C6536B14F72FD579D /* OSH-147.heic */; };
 		B769D3F97ABC3FAE6F6DC8C5 /* OSH-031.heic in Resources */ = {isa = PBXBuildFile; fileRef = 2438BA2B0FA2C6F9E2347520 /* OSH-031.heic */; };
 		B8A02F484C1351196AF0E7A8 /* OSH-005.heic in Resources */ = {isa = PBXBuildFile; fileRef = 574EC4CC9D1D5836B3F5F803 /* OSH-005.heic */; };
@@ -287,6 +291,23 @@
 		FFE4C0318429E27FF6973860 /* OSH-225.heic in Resources */ = {isa = PBXBuildFile; fileRef = 7DEE5139238DAA2CB4D3FB22 /* OSH-225.heic */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5F020F4BD4A7119331F4663A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D3098650C6AB3059F316E7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5500CBCD0017F85E50F9A1C7;
+			remoteInfo = TaiwanBuildingCode;
+		};
+		8A571737D42C92EFD7EB253D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D3098650C6AB3059F316E7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5500CBCD0017F85E50F9A1C7;
+			remoteInfo = TaiwanBuildingCode;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		005085F862C695255A596141 /* OSH-129.heic */ = {isa = PBXFileReference; path = "OSH-129.heic"; sourceTree = "<group>"; };
 		00A6D146BE8FBBE2BFEA4C8E /* OSH-115.heic */ = {isa = PBXFileReference; path = "OSH-115.heic"; sourceTree = "<group>"; };
@@ -315,6 +336,7 @@
 		1F5ADC84ECE5A80462739F12 /* OSH-154.heic */ = {isa = PBXFileReference; path = "OSH-154.heic"; sourceTree = "<group>"; };
 		2013DEDF014EEE3FC3A57BC4 /* OSH-022.heic */ = {isa = PBXFileReference; path = "OSH-022.heic"; sourceTree = "<group>"; };
 		20BCA16764C060F802642E3A /* OSH-109.heic */ = {isa = PBXFileReference; path = "OSH-109.heic"; sourceTree = "<group>"; };
+		212D146B63D68E6DABE57A49 /* SafetyTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyTool.swift; sourceTree = "<group>"; };
 		22B67B876047589E3AE70147 /* OSH-096.heic */ = {isa = PBXFileReference; path = "OSH-096.heic"; sourceTree = "<group>"; };
 		2427E477ACC0A4DD52C638B5 /* IllustrationsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationsHomeView.swift; sourceTree = "<group>"; };
 		2438BA2B0FA2C6F9E2347520 /* OSH-031.heic */ = {isa = PBXFileReference; path = "OSH-031.heic"; sourceTree = "<group>"; };
@@ -330,7 +352,6 @@
 		2F0695A80E688928D7BCD610 /* OSH-138.heic */ = {isa = PBXFileReference; path = "OSH-138.heic"; sourceTree = "<group>"; };
 		2F71D2E18D1807069C916A2A /* OSH-037.heic */ = {isa = PBXFileReference; path = "OSH-037.heic"; sourceTree = "<group>"; };
 		3073E69C96917E72B2FFE760 /* OSH-035.heic */ = {isa = PBXFileReference; path = "OSH-035.heic"; sourceTree = "<group>"; };
-		3224D5D1907E58C90ADA93D6 /* Configuration.storekit */ = {isa = PBXFileReference; path = Configuration.storekit; sourceTree = "<group>"; };
 		3312EB6FE4CB72CA9A0A0681 /* OSH-064.heic */ = {isa = PBXFileReference; path = "OSH-064.heic"; sourceTree = "<group>"; };
 		336D50D3992AA426BD477447 /* OSH-194.heic */ = {isa = PBXFileReference; path = "OSH-194.heic"; sourceTree = "<group>"; };
 		3399EA1A6B447739631272AE /* articles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = articles.json; sourceTree = "<group>"; };
@@ -384,10 +405,12 @@
 		5F4C5AC146AADB650B97D10E /* PreviewLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewLockView.swift; sourceTree = "<group>"; };
 		5F568771776D8F6DA5F53306 /* OSH-244.heic */ = {isa = PBXFileReference; path = "OSH-244.heic"; sourceTree = "<group>"; };
 		61E9C6F6218700F84115710E /* OSH-043.heic */ = {isa = PBXFileReference; path = "OSH-043.heic"; sourceTree = "<group>"; };
+		622A6233254557BBF52BF9C0 /* TaiwanBuildingCodeUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TaiwanBuildingCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		623F679781513A5C8CEC4FAA /* OSH-170.heic */ = {isa = PBXFileReference; path = "OSH-170.heic"; sourceTree = "<group>"; };
 		624A3EA5F86520B5A9718F9E /* OSH-119.heic */ = {isa = PBXFileReference; path = "OSH-119.heic"; sourceTree = "<group>"; };
 		6344D0560D2C108DE0DBCF35 /* OSH-149.heic */ = {isa = PBXFileReference; path = "OSH-149.heic"; sourceTree = "<group>"; };
 		6379C8E2D376793C32327A77 /* OSH-014.heic */ = {isa = PBXFileReference; path = "OSH-014.heic"; sourceTree = "<group>"; };
+		645112148CA0BF824E47A442 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		6552FE968DDE21A7EF763799 /* OSH-097.heic */ = {isa = PBXFileReference; path = "OSH-097.heic"; sourceTree = "<group>"; };
 		67C97DE6A4F2151FBD7D9BBB /* OSH-132.heic */ = {isa = PBXFileReference; path = "OSH-132.heic"; sourceTree = "<group>"; };
 		6B62007CCDD73E69F94CA652 /* OSH-201.heic */ = {isa = PBXFileReference; path = "OSH-201.heic"; sourceTree = "<group>"; };
@@ -403,10 +426,12 @@
 		71AF2F5DFE2FEC1D355B7426 /* OSH-137.heic */ = {isa = PBXFileReference; path = "OSH-137.heic"; sourceTree = "<group>"; };
 		7299027A548E7EAAE66FCF3F /* OSH-101.heic */ = {isa = PBXFileReference; path = "OSH-101.heic"; sourceTree = "<group>"; };
 		73DBFCEAB4C86BCE89D8C389 /* OSH-110.heic */ = {isa = PBXFileReference; path = "OSH-110.heic"; sourceTree = "<group>"; };
+		74459EE39596AD82E32A4D30 /* TaiwanBuildingCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanBuildingCodeTests.swift; sourceTree = "<group>"; };
 		74BE64CA14406D0C22FBD1E1 /* OSH-206.heic */ = {isa = PBXFileReference; path = "OSH-206.heic"; sourceTree = "<group>"; };
 		7755DD66215A3AADA604093F /* OSH-017.heic */ = {isa = PBXFileReference; path = "OSH-017.heic"; sourceTree = "<group>"; };
 		77744D8F548834BCCC526E9E /* OSH-104.heic */ = {isa = PBXFileReference; path = "OSH-104.heic"; sourceTree = "<group>"; };
 		777E4F3E8A5C9F3CA20A556C /* OSH-224.heic */ = {isa = PBXFileReference; path = "OSH-224.heic"; sourceTree = "<group>"; };
+		77AAF92AE322D5EFEA568971 /* TaiwanBuildingCodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanBuildingCodeUITests.swift; sourceTree = "<group>"; };
 		789D284707EB447D3DE7A5BF /* OSH-219.heic */ = {isa = PBXFileReference; path = "OSH-219.heic"; sourceTree = "<group>"; };
 		7BC239AB6471B30AE1A34E61 /* OSH-248.heic */ = {isa = PBXFileReference; path = "OSH-248.heic"; sourceTree = "<group>"; };
 		7C2D62428E13E58B4BCF5D2D /* OSH-178.heic */ = {isa = PBXFileReference; path = "OSH-178.heic"; sourceTree = "<group>"; };
@@ -492,6 +517,7 @@
 		C41680E116127EDF341F7ACD /* OSH-157.heic */ = {isa = PBXFileReference; path = "OSH-157.heic"; sourceTree = "<group>"; };
 		C54DC62A560F3DD1D4B4E416 /* OSH-208.heic */ = {isa = PBXFileReference; path = "OSH-208.heic"; sourceTree = "<group>"; };
 		C591DF3EC2C91F460B82C29A /* OSH-061.heic */ = {isa = PBXFileReference; path = "OSH-061.heic"; sourceTree = "<group>"; };
+		C628B3E677BDA46459EB18BE /* SafetyToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafetyToolsView.swift; sourceTree = "<group>"; };
 		C8E507064E3D5CC37F9A766B /* OSH-188.heic */ = {isa = PBXFileReference; path = "OSH-188.heic"; sourceTree = "<group>"; };
 		C933782BDA646BCE97EB59A6 /* OSH-177.heic */ = {isa = PBXFileReference; path = "OSH-177.heic"; sourceTree = "<group>"; };
 		C94E323066FDEE1094B2B31F /* OSH-196.heic */ = {isa = PBXFileReference; path = "OSH-196.heic"; sourceTree = "<group>"; };
@@ -523,6 +549,7 @@
 		DBB4CA9EA1AA6C8CE686000D /* OSH-192.heic */ = {isa = PBXFileReference; path = "OSH-192.heic"; sourceTree = "<group>"; };
 		DBD36157DC72AA7E8838A31A /* OSH-191.heic */ = {isa = PBXFileReference; path = "OSH-191.heic"; sourceTree = "<group>"; };
 		DC63A0BF6EAC7001BB510650 /* OSH-121.heic */ = {isa = PBXFileReference; path = "OSH-121.heic"; sourceTree = "<group>"; };
+		DCCBD4B025AEB720AE68AE49 /* TaiwanBuildingCodeUnitTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TaiwanBuildingCodeUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD48DAFA57603AE95190609B /* OSH-239.heic */ = {isa = PBXFileReference; path = "OSH-239.heic"; sourceTree = "<group>"; };
 		DDA905BF5DE49EE3BD3A0BA4 /* OSH-203.heic */ = {isa = PBXFileReference; path = "OSH-203.heic"; sourceTree = "<group>"; };
 		DE3A55A1F5F9B6A92FD2C98D /* OSH-135.heic */ = {isa = PBXFileReference; path = "OSH-135.heic"; sourceTree = "<group>"; };
@@ -605,6 +632,7 @@
 			isa = PBXGroup;
 			children = (
 				0DED13E9F8BF0E5AD944BE14 /* TaiwanBuildingCode */,
+				6BF54D2B7958C528BE06A2D2 /* Tests */,
 				A54FE5A9CCC3D09665EA0B39 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -616,10 +644,19 @@
 				F1F05668642E3811D488C26A /* Tab1_Illustrations */,
 				374C885B93151BDC34AA22DB /* Tab2_FullText */,
 				E1DFE7D4AB46807377FF2561 /* Tab3_CommonClauses */,
+				D49AE6BE97E46B2D20C66F60 /* Tab3_Gallery */,
 				F4D0FDE2E07C84D2CADB4E1A /* Tab4_Calculators */,
 				D91BB48D130E48A9B51EC3F3 /* Tab5_Resources */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5610C32850EE45224002EF06 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				77AAF92AE322D5EFEA568971 /* TaiwanBuildingCodeUITests.swift */,
+			);
+			path = UITests;
 			sourceTree = "<group>";
 		};
 		66BEE957F2188592B0117E97 /* App */ = {
@@ -631,6 +668,15 @@
 				87BC5ED80A0913BEC3559950 /* TaiwanBuildingCodeApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		6BF54D2B7958C528BE06A2D2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5610C32850EE45224002EF06 /* UITests */,
+				C9BB1E2A179621D7832ED077 /* UnitTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		801066C0E5EAEB572ADF9F14 /* data */ = {
@@ -645,6 +691,8 @@
 			isa = PBXGroup;
 			children = (
 				5C869B95D28F6D99C5B8E175 /* TaiwanBuildingCode.app */,
+				622A6233254557BBF52BF9C0 /* TaiwanBuildingCodeUITests.xctest */,
+				DCCBD4B025AEB720AE68AE49 /* TaiwanBuildingCodeUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -662,16 +710,31 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		C9BB1E2A179621D7832ED077 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				74459EE39596AD82E32A4D30 /* TaiwanBuildingCodeTests.swift */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
 		D3B0826C46968FEE2C5F3AE6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				B49F6031107D9B3910C2F2B0 /* Assets.xcassets */,
-				3224D5D1907E58C90ADA93D6 /* Configuration.storekit */,
 				FA8ED0AFAAFA3D89EAFE485C /* PrivacyInfo.xcprivacy */,
 				801066C0E5EAEB572ADF9F14 /* data */,
 				DF6B3BABD3F2E7233B0B7D64 /* images */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D49AE6BE97E46B2D20C66F60 /* Tab3_Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				645112148CA0BF824E47A442 /* GalleryView.swift */,
+			);
+			path = Tab3_Gallery;
 			sourceTree = "<group>";
 		};
 		D91BB48D130E48A9B51EC3F3 /* Tab5_Resources */ = {
@@ -961,6 +1024,7 @@
 			isa = PBXGroup;
 			children = (
 				9DB2A0DE17A90BB7C6ECE9CA /* QuizView.swift */,
+				C628B3E677BDA46459EB18BE /* SafetyToolsView.swift */,
 			);
 			path = Tab4_Calculators;
 			sourceTree = "<group>";
@@ -971,6 +1035,7 @@
 				8C19526A16F70329467F1D0C /* ArticleData.swift */,
 				C089AE000FF01EC45D774B84 /* QuizQuestion.swift */,
 				AEED47BA0DEC4004E75F07BA /* RegulatoryResource.swift */,
+				212D146B63D68E6DABE57A49 /* SafetyTool.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -996,6 +1061,42 @@
 			productReference = 5C869B95D28F6D99C5B8E175 /* TaiwanBuildingCode.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BBE28D3426569BE527FE1607 /* TaiwanBuildingCodeUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D3DCAEC65E00B14FC4A765F /* Build configuration list for PBXNativeTarget "TaiwanBuildingCodeUnitTests" */;
+			buildPhases = (
+				D6D1477D4D795869D146285E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13ED400B7202277665F8D941 /* PBXTargetDependency */,
+			);
+			name = TaiwanBuildingCodeUnitTests;
+			packageProductDependencies = (
+			);
+			productName = TaiwanBuildingCodeUnitTests;
+			productReference = DCCBD4B025AEB720AE68AE49 /* TaiwanBuildingCodeUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E985F7A251AB51CBAEF8BBCE /* TaiwanBuildingCodeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC97A5DA2FDEB7A674822683 /* Build configuration list for PBXNativeTarget "TaiwanBuildingCodeUITests" */;
+			buildPhases = (
+				F4E20275DC0CC01E5526B066 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50FFBEA700EE923B97DBA03D /* PBXTargetDependency */,
+			);
+			name = TaiwanBuildingCodeUITests;
+			packageProductDependencies = (
+			);
+			productName = TaiwanBuildingCodeUITests;
+			productReference = 622A6233254557BBF52BF9C0 /* TaiwanBuildingCodeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1008,6 +1109,15 @@
 					5500CBCD0017F85E50F9A1C7 = {
 						DevelopmentTeam = 7H7ZUG2WX8;
 						ProvisioningStyle = Automatic;
+					};
+					BBE28D3426569BE527FE1607 = {
+						DevelopmentTeam = 7H7ZUG2WX8;
+						ProvisioningStyle = Automatic;
+					};
+					E985F7A251AB51CBAEF8BBCE = {
+						DevelopmentTeam = 7H7ZUG2WX8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5500CBCD0017F85E50F9A1C7;
 					};
 				};
 			};
@@ -1026,6 +1136,8 @@
 			projectRoot = "";
 			targets = (
 				5500CBCD0017F85E50F9A1C7 /* TaiwanBuildingCode */,
+				E985F7A251AB51CBAEF8BBCE /* TaiwanBuildingCodeUITests */,
+				BBE28D3426569BE527FE1607 /* TaiwanBuildingCodeUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1036,7 +1148,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ACC6B9A0B242BF770A9433E /* Assets.xcassets in Resources */,
-				B71D1D8F7C2068E09AE1738F /* Configuration.storekit in Resources */,
 				58A6E0552856DD16D41B3A23 /* OSH-001.heic in Resources */,
 				F9B60B91C2C4D230DF7B7835 /* OSH-002.heic in Resources */,
 				A491665D132C18462B33BB53 /* OSH-003.heic in Resources */,
@@ -1309,6 +1420,7 @@
 				CD6D8BF6DDECD3258156A1C8 /* ContentView.swift in Sources */,
 				3353D78FE63EA8AF6F287B51 /* FireCommonClausesView.swift in Sources */,
 				7CD4812516A58EE75E9AFE71 /* FullTextHomeView.swift in Sources */,
+				1903A7F7C91FD52508C4E0B0 /* GalleryView.swift in Sources */,
 				69418CABF219A3933184A67F /* IAPManager.swift in Sources */,
 				971A10DF1E1482AF74BA6539 /* IllustrationsHomeView.swift in Sources */,
 				D62FA5809E87917B790E44C4 /* IsoHouseView.swift in Sources */,
@@ -1321,14 +1433,62 @@
 				38A13FF8228EF0F37E70B2B4 /* RegulatoryResource.swift in Sources */,
 				B2960170DA9967535A02C4D3 /* RegulatoryResourcesView.swift in Sources */,
 				3DF07040A244C2FEF201AC46 /* ResourceJPEG.swift in Sources */,
+				4517DB12E4CAA463AABD5881 /* SafetyTool.swift in Sources */,
+				B5BF94CD7503EB796AC788CF /* SafetyToolsView.swift in Sources */,
 				B545145B20F999053188CB5D /* SearchView.swift in Sources */,
 				259044B8A00F783E706D7C01 /* TaiwanBuildingCodeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6D1477D4D795869D146285E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E4E6E2CDDDE285D9433113 /* TaiwanBuildingCodeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4E20275DC0CC01E5526B066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82928D3B466A757FD038C594 /* TaiwanBuildingCodeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		13ED400B7202277665F8D941 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5500CBCD0017F85E50F9A1C7 /* TaiwanBuildingCode */;
+			targetProxy = 5F020F4BD4A7119331F4663A /* PBXContainerItemProxy */;
+		};
+		50FFBEA700EE923B97DBA03D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5500CBCD0017F85E50F9A1C7 /* TaiwanBuildingCode */;
+			targetProxy = 8A571737D42C92EFD7EB253D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		03D5BF989E092FF5ACF4DF89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.taiwanarch.oshfacilities.illustrated.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TaiwanBuildingCode;
+			};
+			name = Debug;
+		};
 		14951A3B76D1569AC05939DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1383,7 +1543,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7H7ZUG2WX8;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1397,7 +1557,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1443,7 +1603,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 7H7ZUG2WX8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1463,7 +1623,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1472,6 +1632,40 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		800A58CB359A9FD48E0A012E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.taiwanarch.oshfacilities.illustrated.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaiwanBuildingCode.app/TaiwanBuildingCode";
+			};
+			name = Release;
+		};
+		D371EE2AC8FBAE33384C8636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.taiwanarch.oshfacilities.illustrated.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaiwanBuildingCode.app/TaiwanBuildingCode";
 			};
 			name = Debug;
 		};
@@ -1494,6 +1688,23 @@
 			};
 			name = Release;
 		};
+		F8A50BDEB52FE9D48E227BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.taiwanarch.oshfacilities.illustrated.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TaiwanBuildingCode;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1502,6 +1713,24 @@
 			buildConfigurations = (
 				6C06FB7DA844F1A9AE657199 /* Debug */,
 				3A9EA73E71BB0E7A5F58D7D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6D3DCAEC65E00B14FC4A765F /* Build configuration list for PBXNativeTarget "TaiwanBuildingCodeUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D371EE2AC8FBAE33384C8636 /* Debug */,
+				800A58CB359A9FD48E0A012E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AC97A5DA2FDEB7A674822683 /* Build configuration list for PBXNativeTarget "TaiwanBuildingCodeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03D5BF989E092FF5ACF4DF89 /* Debug */,
+				F8A50BDEB52FE9D48E227BB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
