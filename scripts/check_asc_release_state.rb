@@ -78,6 +78,48 @@ iaps = get_json(
 ).fetch("data")
 
 latest_build = builds.max_by { |build| Time.parse(build.dig("attributes", "uploadedDate").to_s) rescue Time.at(0) }
+requested_version = versions.first
+selected_build = nil
+screenshot_sets = []
+
+if requested_version
+  selected_build = get_json(
+    "/v1/appStoreVersions/#{requested_version.fetch("id")}/build",
+    { "fields[builds]" => "version,processingState,uploadedDate" }
+  )["data"]
+
+  localizations = get_json(
+    "/v1/appStoreVersions/#{requested_version.fetch("id")}/appStoreVersionLocalizations",
+    { "limit" => "50", "fields[appStoreVersionLocalizations]" => "locale" }
+  ).fetch("data")
+
+  screenshot_sets = localizations.flat_map do |localization|
+    sets = get_json(
+      "/v1/appStoreVersionLocalizations/#{localization.fetch("id")}/appScreenshotSets",
+      { "limit" => "50", "fields[appScreenshotSets]" => "screenshotDisplayType" }
+    ).fetch("data")
+
+    sets.map do |set|
+      screenshots = get_json(
+        "/v1/appScreenshotSets/#{set.fetch("id")}/appScreenshots",
+        { "limit" => "50" }
+      ).fetch("data")
+      {
+        locale: localization.dig("attributes", "locale"),
+        displayType: set.dig("attributes", "screenshotDisplayType"),
+        count: screenshots.length,
+        screenshots: screenshots.map do |screenshot|
+          {
+            id: screenshot.fetch("id"),
+            fileName: screenshot.dig("attributes", "fileName"),
+            deliveryState: screenshot.dig("attributes", "assetDeliveryState", "state")
+          }
+        end
+      }
+    end
+  end
+end
+
 summary = {
   app: {
     id: app_id,
@@ -103,6 +145,13 @@ summary = {
     expired: latest_build.dig("attributes", "expired"),
     usesNonExemptEncryption: latest_build.dig("attributes", "usesNonExemptEncryption")
   },
+  selectedBuild: selected_build && {
+    id: selected_build.fetch("id"),
+    version: selected_build.dig("attributes", "version"),
+    processingState: selected_build.dig("attributes", "processingState"),
+    uploadedDate: selected_build.dig("attributes", "uploadedDate")
+  },
+  screenshotSets: screenshot_sets,
   iap: iaps.first && {
     id: iaps.first.fetch("id"),
     name: iaps.first.dig("attributes", "name"),

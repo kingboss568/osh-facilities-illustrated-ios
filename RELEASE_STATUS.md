@@ -20,9 +20,11 @@
 - 1.1 無簽名 App + Unit/UI test targets：Xcode 27 beta 編譯成功
 - 1.1 自動測試：3 個 Unit + 5 個 UI 全數通過，0 failure
 - `scripts/verify_1_1_update.sh`：0 failure
-- 1.1 截圖：iPhone 6.9 與 iPad 13 各 6 張，尺寸與內容均已檢查
+- 1.1 中繼資料：已上傳 ASC
+- 1.1 截圖：iPhone 6.9 與 iPad 13 各 6 張，live ASC 均為 `COMPLETE`
 - Xcode Cloud：首次 Existing App 綁定回 404；ASC 尚未建立 `ciProduct`，依成功案例清除本機錯綁資料後重建
-- Fastlane：待上傳 metadata / screenshots，選取有效 Build 後送審
+- 1.1 所選 Build：`null`；待 Cloud 產生並選取 build 2
+- Fastlane：metadata / screenshots 已完成；待有效 Build 後送審
 - Review Submission：尚未建立；不得回報已送審
 
 ## 1.1 必交契約
