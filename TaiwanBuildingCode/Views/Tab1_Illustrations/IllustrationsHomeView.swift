@@ -11,7 +11,11 @@ import SwiftUI
 struct IllustrationsHomeView: View {
     @EnvironmentObject var store: ArticleStore
     @EnvironmentObject var iap: IAPManager
-    @State private var homeQuery = ""
+    @State private var homeQuery: String
+
+    init(initialQuery: String = "") {
+        _homeQuery = State(initialValue: initialQuery)
+    }
 
     private let series: [(id: String, title: String, en: String,
                           range: String, icon: IsoIconKind)] = [
@@ -100,19 +104,6 @@ struct IllustrationsHomeView: View {
                     .lineLimit(1)
             }
             Spacer()
-            NavigationLink { PaywallView() } label: {
-                Label(
-                    iap.isUnlocked ? "Pro 已解鎖" : "Pro / 解鎖完整圖解",
-                    systemImage: iap.isUnlocked ? "checkmark.seal.fill" : "crown.fill"
-                )
-                .font(.system(size: 12, weight: .heavy))
-                .foregroundStyle(iap.isUnlocked ? AppTheme.leaf : AppTheme.rust)
-                .padding(.horizontal, 12)
-                .frame(height: 38)
-                .background(.white.opacity(0.9), in: Capsule())
-                .overlay(Capsule().stroke(AppTheme.line))
-            }
-            .accessibilityLabel(iap.isUnlocked ? "已解鎖完整版" : "Pro 解鎖完整圖解")
         }
     }
 

@@ -17,10 +17,11 @@
 - 正式版 Build：`VALID`
 - IAP：`APPROVED`
 - 1.1 原始碼：功能完成
-- 1.1 無簽名 App + Unit/UI test targets：編譯成功
+- 1.1 無簽名 App + Unit/UI test targets：Xcode 27 beta 編譯成功
+- 1.1 自動測試：3 個 Unit + 5 個 UI 全數通過，0 failure
 - `scripts/verify_1_1_update.sh`：0 failure
-- 1.1 截圖：待在既有 iPhone 6.9 與 iPad 13 Simulator 逐台產生
-- Xcode Cloud：待連接本 GitHub 來源並完成 Archive
+- 1.1 截圖：iPhone 6.9 與 iPad 13 各 6 張，尺寸與內容均已檢查
+- Xcode Cloud：首次 Existing App 綁定回 404；ASC 尚未建立 `ciProduct`，依成功案例清除本機錯綁資料後重建
 - Fastlane：待上傳 metadata / screenshots，選取有效 Build 後送審
 - Review Submission：尚未建立；不得回報已送審
 
@@ -36,8 +37,8 @@
 - App 1.1 與有效 Build 綁定
 - 最終以 Review Submission 與版本狀態確認送審
 
-## 暫時阻擋
+## 當前發行 Gate
 
-永久規範要求 Xcode / Simulator 重度流程前資料卷至少保留 15 GiB；2026-07-21
-檢查時只有約 8.5 GiB。因此尚未啟動 Simulator。Git、文件、Cloud 與 ASC 可先行，
-截圖與 UI test 執行需在空間符合規範後進行。
+功能、測試與截圖 Gate 已通過。下一個 Gate 是讓 Xcode Cloud `ciProduct` 與 App
+`6780516032` relationship 正常回傳，再產生 Archive；不得把本機 placeholder manifest
+或單純的 upload 成功當成 Cloud／送審完成。

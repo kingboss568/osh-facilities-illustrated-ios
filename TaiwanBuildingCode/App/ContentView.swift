@@ -19,13 +19,20 @@ struct ContentView: View {
             // ── Page content ──────────────────────────────────────────────
             Group {
                 switch selectedTab {
-                case 0: IllustrationsHomeView()
+                case 0: IllustrationsHomeView(initialQuery: ScreenshotLaunchOptions.searchQuery)
                 case 1: FullTextHomeView()
                 case 2: GalleryView()
                 case 3: FireCommonClausesView()
-                case 4: CalculatorsHomeView()
+                case 4:
+                    if let tool = ScreenshotLaunchOptions.tool {
+                        NavigationStack {
+                            SafetyToolDetailView(tool: tool)
+                        }
+                    } else {
+                        CalculatorsHomeView()
+                    }
                 case 5: RegulatoryResourcesView()
-                default: IllustrationsHomeView()
+                default: IllustrationsHomeView(initialQuery: ScreenshotLaunchOptions.searchQuery)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -65,6 +72,23 @@ private enum ScreenshotLaunchOptions {
             return 0
         }
         return min(max(tab, 0), 5)
+    }
+
+    static var searchQuery: String {
+        guard let index = arguments.firstIndex(of: "--screenshot-search"),
+              arguments.indices.contains(index + 1) else {
+            return ""
+        }
+        return arguments[index + 1]
+    }
+
+    static var tool: SafetyTool? {
+        guard let index = arguments.firstIndex(of: "--screenshot-tool"),
+              arguments.indices.contains(index + 1),
+              let toolID = Int(arguments[index + 1]) else {
+            return nil
+        }
+        return SafetyToolCatalog.tools.first { $0.id == toolID }
     }
 }
 

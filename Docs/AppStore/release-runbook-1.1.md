@@ -26,6 +26,12 @@
 clone 後 `ci_post_clone.sh` 會重跑 1.1 Gate。只有成功的 Archive / App Store
 distribution artifact 才能進下一階段。
 
+若 Existing App 確認畫面的名稱與 Bundle ID 正確，但按 Next 回
+`API Invalid status code: 404`，先查 `apps/6780516032/ciProduct`。若仍為 null，
+代表是 Cloud relationship 問題，不改 Swift code、不提交 placeholder manifest；依永久列管
+成功案例用 Xcode 的 `Delete Xcode Cloud Data...` 清除錯綁資料後重新 Get Started，直到
+`ciProduct` 與反向 `/app` relationship 都正常。
+
 ## Fastlane
 
 環境由未追蹤的 `.env.fastlane` 提供，禁止提交 API 私鑰。

@@ -78,6 +78,7 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.taiwanarch.oshfacilities.illustrated.tests
+        GENERATE_INFOPLIST_FILE: "YES"
 
   TaiwanBuildingCodeUITests:
     type: bundle.ui-testing
@@ -91,6 +92,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.taiwanarch.oshfacilities.illustrated.uitests
         TEST_TARGET_NAME: TaiwanBuildingCode
+        GENERATE_INFOPLIST_FILE: "YES"
 
 schemes:
   TaiwanBuildingCode:

@@ -1,6 +1,7 @@
 .DS_Store
 ._*
 .env.fastlane
+**/xcuserdata/
 
 build/
 DerivedData/
