@@ -8,7 +8,7 @@
 - App Store Connect App ID：`6780516032`
 - Bundle ID：`com.taiwanarch.oshfacilities.illustrated`
 - ASC 帳號 / 團隊：`jushiung@gmail.com` / `Yu Shiung Jiang`
-- 版本目標：`1.1 (2)`
+- 送審版本：`1.1 (7)`
 - IAP：`6780516552` / `com.taiwanarch.oshfacilities.illustrated.full`
 
 ## 目前事實
@@ -22,10 +22,14 @@
 - `scripts/verify_1_1_update.sh`：0 failure
 - 1.1 中繼資料：已上傳 ASC
 - 1.1 截圖：iPhone 6.9 與 iPad 13 各 6 張，live ASC 均為 `COMPLETE`
-- Xcode Cloud：首次 Existing App 綁定回 404；ASC 尚未建立 `ciProduct`，依成功案例清除本機錯綁資料後重建
-- 1.1 所選 Build：`null`；待 Cloud 產生並選取 build 2
-- Fastlane：metadata / screenshots 已完成；待有效 Build 後送審
-- Review Submission：尚未建立；不得回報已送審
+- Xcode Cloud 關聯：已在 `Yu Shiung Jiang` 帳號線重建成功；ciProduct `0e91a40a-2494-4fa5-961e-6ef77b5f05c0`
+- Xcode Cloud 工作流程：`Default` / `A292E575-C716-4540-A93A-83E65FB3C0EA`，單一 `Archive - iOS → App Store Connect`
+- Xcode Cloud Build 7：run `8015416c-82cf-412e-85eb-8cbb4d5d7c35`，Archive、App Store export 與 Prepare Build for App Store Connect 全數通過
+- ASC Build：`1.1 (7)` / `fbf510df-bcb6-4515-bfa1-734d5b23a466` / `VALID` / 未過期 / `usesNonExemptEncryption=false`
+- 1.1 所選 Build：`1.1 (7)`
+- Fastlane：metadata、screenshots、選取 Build 與 submit review 均已完成
+- Review Submission：`4f274735-bcbc-4bdb-bba7-b7b83b48fd56` / `WAITING_FOR_REVIEW`，提交時間 `2026-07-21 19:44:35`（Asia/Taipei）
+- App Store version 1.1：`WAITING_FOR_REVIEW`
 
 ## 1.1 必交契約
 
@@ -41,6 +45,7 @@
 
 ## 當前發行 Gate
 
-功能、測試與截圖 Gate 已通過。下一個 Gate 是讓 Xcode Cloud `ciProduct` 與 App
-`6780516032` relationship 正常回傳，再產生 Archive；不得把本機 placeholder manifest
-或單純的 upload 成功當成 Cloud／送審完成。
+功能、測試、截圖、Cloud Archive、ASC Build 與送審 Gate 已通過。後續只監看
+App Review 狀態；不得把 Cloud 成功或上傳成功單獨當成送審證據，本次完成證據是
+版本 `WAITING_FOR_REVIEW`、Build 7 `VALID` 且已選入版本，以及 Review Submission
+`4f274735-bcbc-4bdb-bba7-b7b83b48fd56`。
